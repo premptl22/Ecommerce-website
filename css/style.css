@@ -215,3 +215,53 @@ footer {
 footer.dark-mode {
     background: #1e1e1e;
 }
+
+/* New styles for "See All" link and company list page */
+.see-all {
+    font-size: 16px;
+    margin-left: 20px;
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.see-all:hover {
+    text-decoration: underline;
+}
+
+.company-list {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.company-list h2 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.company-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.company-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+}
+
+body.dark-mode .company-card {
+    background: #333;
+    color: #fff;
+}
+
+.company-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.company-card p {
+    font-size: 16px;
+}
