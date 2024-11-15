@@ -250,10 +250,17 @@ footer.dark-mode {
     margin: 10px;
     padding: 20px;
     width: calc(33% - 20px);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
 body.dark-mode .company-card {
     background: #333;
+    color: #fff;
+}
+
+.company-card:hover {
+    background: #ff6600;
     color: #fff;
 }
 
@@ -264,4 +271,8 @@ body.dark-mode .company-card {
 
 .company-card p {
     font-size: 16px;
+}
+
+body.dark-mode .company-card:hover {
+    background: #e65c00;
 }
