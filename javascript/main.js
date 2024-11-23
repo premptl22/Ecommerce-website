@@ -1,20 +1,24 @@
-document
-.getElementById("see-all-link")
-.addEventListener("click", function (event) {
-    event.preventDefault();
-    var companyList = document.getElementById("company-list");
-    if (companyList.style.display === "none") {
-    companyList.style.display = "block";
-    this.textContent = "Hide All";
-    } else {
-    companyList.style.display = "none";
-    this.textContent = "See All";
-    }
-});
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modeToggleBtn = document.getElementById('mode-toggle-btn');
+    const body = document.body;
 
-var companyItems = document.querySelectorAll(".company-item");
-companyItems.forEach(function (item) {
-item.addEventListener("click", function () {
-    alert("Selected Company: " + this.textContent);
-});
+    // Check localStorage for theme preference
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        modeToggleBtn.textContent = 'Light Mode';
+    } else {
+        body.classList.remove('dark-mode');
+        modeToggleBtn.textContent = 'Dark Mode';
+    }
+
+    modeToggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            modeToggleBtn.textContent = 'Light Mode';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            modeToggleBtn.textContent = 'Dark Mode';
+            localStorage.setItem('theme', 'light');
+        }
+    });
 });

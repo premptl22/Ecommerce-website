@@ -276,3 +276,19 @@ body.dark-mode .company-card {
 body.dark-mode .company-card:hover {
     background: #e65c00;
 }
+
+/* Style for the dark mode toggle button */
+.mode-toggle button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(3, 3, 3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.mode-toggle button:hover {
+    background: #e65c00;
+}
